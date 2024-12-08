@@ -1,0 +1,7 @@
+.home-background {
+    background-image: url('../../../public/images/back.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #000;
+  }
+  
