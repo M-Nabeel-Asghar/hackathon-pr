@@ -2,7 +2,7 @@ import Image from "next/image";
 import InnerPeace from "../../../public/images/Rec.png";
 import SideInner from "../../../public/images/in.png";
 
-export default function () {
+const Hero = () => {
   return (
     <>
       <div className="grid grid-cols-3 gap-0 p-8  bg-[#FCF8F3]">
@@ -25,3 +25,4 @@ export default function () {
     </>
   );
 }
+export default Hero;
