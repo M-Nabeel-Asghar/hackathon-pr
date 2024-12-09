@@ -16,7 +16,7 @@ export default function ContactForm() {
       {/* Navbar Section */}
       <Navbar />
       
-      {/* Background Section */}
+      
       <div className="contact-background h-[316px]"></div>
       
       {/* Header Section */}
