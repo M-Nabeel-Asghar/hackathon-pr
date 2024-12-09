@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="h-[505px] p-8 border-t border-black">
+    <footer className="h-[505px] p-8 border-t border-[#00000063]">
       <div className="h-[370px] mt-[48px] flex justify-between items-start">
         {/* Company Info */}
         <div className="w-[285px]">

@@ -1,32 +1,19 @@
-import React from "react";
+import React from 'react';
+import Image from 'next/image';
+import gallery from '../../../public/images/gallery.png'
 
-const GallerySection = () => {
-  const images = [
-    "/images/gallery1.jpg",
-    "/images/gallery2.jpg",
-    "/images/gallery3.jpg",
-    "/images/gallery4.jpg",
-    "/images/gallery5.jpg",
-    "/images/gallery6.jpg",
-  ];
-
+const  Gallery = () => {
   return (
-    <div className="gallery-section bg-white p-8">
-      <h2 className="text-center text-2xl font-bold mb-4">
-        Share your setup with #FuniroFurniture
-      </h2>
-      <div className="grid grid-cols-3 gap-4">
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`Gallery ${index + 1}`}
-            className="rounded-lg shadow-md object-cover w-full h-48"
-          />
-        ))}
+    <div className='my-[50px]'>
+      <div>
+        <p className='font-semibold text-[20px] text-center text-[#616161]'>Share your setup with</p>
+        <h1 className='font-bold text-[40px] text-center' >#FuniroFurniture</h1>
+      </div>
+      <div>
+          <Image src={gallery} height={721} alt='gallery'/>
       </div>
     </div>
   );
 };
 
-export default GallerySection;
+export default Gallery;

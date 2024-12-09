@@ -4,4 +4,21 @@
     background-position: center;
     color: #000;
   }
-  
+  .shop-background {
+    background-image: url('../../../public/images/shb.png');
+    background-size: cover;
+    background-position: center;
+    color: #000;
+  }
+  .contact-background {
+    background-image: url('../../../public/images/contactb.png');
+    background-size: cover;
+    background-position: center;
+    color: #000;
+  }
+  .blog-background {
+    background-image: url('../../../public/images/bb.png');
+    background-size: cover;
+    background-position: center;
+    color: #000;
+  }

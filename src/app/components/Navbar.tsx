@@ -1,12 +1,13 @@
-"use client"
-import React, { useState } from 'react';
-import Image from 'next/image';
-import head from '../../../public/images/head.jpg';
+"use client";
+import React, { useState } from "react";
+import Image from "next/image";
+import head from "../../../public/images/head.jpg";
 import { RiAccountCircleFill } from "react-icons/ri";
 import { CiSearch } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { HiOutlineMenuAlt3, HiX } from "react-icons/hi"; // Hamburger and Close icons
+import Link from "next/link";
+import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,16 +18,34 @@ const Navbar = () => {
         {/* Logo Section */}
         <div className="flex items-center">
           <Image src={head} alt="logo" width={40} height={40} />
-          <h1 className="ml-2 text-[24px] sm:text-[28px] lg:text-[34px] font-bold">Furniro</h1>
+          <h1 className="ml-2 text-[24px] sm:text-[28px] lg:text-[34px] font-bold">
+            Furniro
+          </h1>
         </div>
 
         {/* Navigation Links (Hidden on Mobile) */}
         <div className="hidden md:flex gap-10">
           <ul className="flex items-center gap-6 text-sm sm:text-base lg:text-lg">
-            <li className="hover:text-gray-600 cursor-pointer">Home</li>
-            <li className="hover:text-gray-600 cursor-pointer">Shop</li>
-            <li className="hover:text-gray-600 cursor-pointer">Blog</li>
-            <li className="hover:text-gray-600 cursor-pointer">Contact</li>
+            <li>
+              <Link href="/" className="hover:text-gray-600">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/shop" className="hover:text-gray-600">
+                Shop
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog" className="hover:text-gray-600">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-gray-600">
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -54,10 +73,26 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-[#FFFFFF] text-black">
           <ul className="flex flex-col items-center gap-4 text-center py-4">
-            <li className="hover:text-gray-600 cursor-pointer">Home</li>
-            <li className="hover:text-gray-600 cursor-pointer">Shop</li>
-            <li className="hover:text-gray-600 cursor-pointer">Blog</li>
-            <li className="hover:text-gray-600 cursor-pointer">Contact</li>
+            <li>
+              <Link href="/" className="hover:text-gray-600">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/shop" className="hover:text-gray-600">
+                Shop
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog" className="hover:text-gray-600">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-gray-600">
+                Contact
+              </Link>
+            </li>
             <div className="flex gap-4 mt-4">
               <RiAccountCircleFill className="w-6 h-6 cursor-pointer" />
               <CiSearch className="w-6 h-6 cursor-pointer" />
