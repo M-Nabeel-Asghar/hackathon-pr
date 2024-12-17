@@ -17,66 +17,67 @@ export default function ShoppingCart() {
         ></div>
     <div className="container mx-auto px-4 py-8">
       <div className="flex flex-col lg:flex-row gap-8">
-        {/* Cart Items */}
-        <div className="lg:w-2/3">
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead className="bg-[#F9F1E7]">
-                <tr>
-                  <th className="text-left py-4 px-6">Product</th>
-                  <th className="text-left py-4 px-6">Price</th>
-                  <th className="text-left py-4 px-6">Quantity</th>
-                  <th className="text-left py-4 px-6">Subtotal</th>
-                  <th className="py-4 px-6"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b">
-                  <td className="py-4 px-6">
-                    <div className="flex items-center gap-4">
-                      <Image
-                        src="/images/sofa.png?height=100&width=100"
-                        alt="Asgaard sofa"
-                        width={100}
-                        height={100}
-                        className="rounded-lg bg-[#d8d1c9]"
-                      />
-                      <span className="text-gray-600">Asgaard sofa</span>
-                    </div>
-                  </td>
-                  <td className="py-4 px-6">
-                    <span className="text-gray-600">Rs. 250,000.00</span>
-                  </td>
-                  <td className="py-4 px-6">
-                    <div className="flex items-center border rounded-md w-24">
-                      <button
-                        className="px-3 py-2 hover:bg-gray-100"
-                        onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                      >
-                        -
-                      </button>
-                      <span className="px-3 py-2">{quantity}</span>
-                      <button
-                        className="px-3 py-2 hover:bg-gray-100"
-                        onClick={() => setQuantity(quantity + 1)}
-                      >
-                        +
-                      </button>
-                    </div>
-                  </td>
-                  <td className="py-4 px-6">
-                    <span className="text-gray-600">Rs. 250,000.00</span>
-                  </td>
-                  <td className="py-4 px-6">
-                    <button className="text-gray-500 hover:text-gray-700">
-                      <Trash2 className="w-5 h-5" />
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+{/* Cart Items */}
+<div className="lg:w-2/3">
+  <div className="overflow-x-auto">
+    <table className="w-full">
+      <thead className="bg-[#F9F1E7]">
+        <tr>
+          <th className="text-left py-4 px-6">Product</th>
+          <th className="text-left py-4 px-6">Price</th>
+          <th className="text-left py-4 px-6">Quantity</th>
+          <th className="text-left py-4 px-6">Subtotal</th>
+          <th className="py-4 px-6"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr className="border-b">
+          <td className="py-4 px-6">
+            <div className="flex items-center gap-4 flex-col sm:flex-row">
+              <Image
+                src="/images/sofa.png?height=100&width=100"
+                alt="Asgaard sofa"
+                width={100}
+                height={100}
+                className="rounded-lg bg-[#d8d1c9]"
+              />
+              <span className="text-gray-600">Asgaard sofa</span>
+            </div>
+          </td>
+          <td className="py-4 px-6">
+            <span className="text-gray-600">Rs. 250,000.00</span>
+          </td>
+          <td className="py-4 px-6">
+            <div className="flex items-center border rounded-md w-24">
+              <button
+                className="px-3 py-2 hover:bg-gray-100"
+                onClick={() => setQuantity(Math.max(1, quantity - 1))}
+              >
+                -
+              </button>
+              <span className="px-3 py-2">{quantity}</span>
+              <button
+                className="px-3 py-2 hover:bg-gray-100"
+                onClick={() => setQuantity(quantity + 1)}
+              >
+                +
+              </button>
+            </div>
+          </td>
+          <td className="py-4 px-6">
+            <span className="text-gray-600">Rs. 250,000.00</span>
+          </td>
+          <td className="py-4 px-6">
+            <button className="text-gray-500 hover:text-gray-700">
+              <Trash2 className="w-5 h-5" />
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
 
         {/* Cart Totals */}
         <div className="lg:w-1/3">
