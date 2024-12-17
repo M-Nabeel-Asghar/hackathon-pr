@@ -40,7 +40,7 @@ export default function Scart() {
       {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {products.map((product) => (
-        <Link href="/single_product">
+        <Link key={product.id} href="/single_product">
           <div
             key={product.id}
             className="relative bg-white shadow-md rounded-lg overflow-hidden p-4 w-[285px] h-[446px] transition-transform transform hover:scale-105 hover:shadow-lg group"
