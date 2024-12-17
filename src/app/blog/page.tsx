@@ -1,8 +1,6 @@
 import Image from 'next/image'
-import Navbar from '../components/Navbar';
 import '../style/style.css'
 import Frame from '../components/Frame';
-import Footer from '../components/Footer';
 import b1 from '../../../public/images/b1.png';
 import b2 from '../../../public/images/b2.png';
 import b3 from '../../../public/images/b3.png';
@@ -15,7 +13,7 @@ import b8 from '../../../public/images/b8.png';
 export default function BlogPage() {
   return (
     <div>
-        <Navbar />
+
         <div className="blog-background h-[316px]"></div>
         <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8 ">
         {/* Main Content */}
@@ -230,7 +228,6 @@ export default function BlogPage() {
             <button className="px-6 py-3 border rounded-md text-lg font-bold bg-[#F9F1E7] text-[#000000]  hover:shadow-md hover:bg-[#B88E2F] hover:text-white transition-all m-3">Next</button>
       </div>
       <Frame />
-      <Footer />
     </div>
   )
 }

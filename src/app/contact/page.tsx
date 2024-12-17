@@ -1,9 +1,8 @@
 'use client';
-import Navbar from '../components/Navbar';
 import React from 'react';
 import '../style/style.css';
 import Frame from '../components/Frame';
-import Footer from '../components/Footer';
+
 
 export default function ContactForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -13,8 +12,7 @@ export default function ContactForm() {
 
   return (
     <div>
-      {/* Navbar Section */}
-      <Navbar />
+
       
       <div className="contact-background h-[316px] bg-cover bg-center"></div>
       
@@ -136,7 +134,6 @@ export default function ContactForm() {
       </div>
 
       <Frame />
-      <Footer />
     </div>
   );
 }

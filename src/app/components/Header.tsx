@@ -1,5 +1,6 @@
 import React from 'react';
 import '../style/style.css';
+import Link from 'next/link';
 
 const Header = () => {
   return (
@@ -14,10 +15,12 @@ const Header = () => {
           <p className='text-sm md:text-base mb-6'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.
           </p>
+          <Link href='./shop'>
           <button className='w-full md:w-[222px] h-[74px] py-4 px-6 md:px-[72px] bg-[#B88E2F] text-white 
             hover:bg-[#9c7a26] transition-colors duration-300'>
             BUY NOW
           </button>
+          </Link>
         </div>
       </div>
     </div>

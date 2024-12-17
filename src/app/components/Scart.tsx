@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Scart() {
   const products = [
@@ -39,6 +40,7 @@ export default function Scart() {
       {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {products.map((product) => (
+          <Link href="/single_product">
           <div
             key={product.id}
             className="relative bg-white shadow-md rounded-lg overflow-hidden p-4 w-[285px] h-[446px] transition-transform transform hover:scale-105 hover:shadow-lg group"
@@ -55,9 +57,11 @@ export default function Scart() {
             {/* Hover Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
               {/* Add to Cart Button */}
+              <Link href='/cart'>
               <button className="bg-white text-yellow-500 px-6 py-2 rounded-md font-bold hover:bg-yellow-500 hover:text-white transition">
                 Add to Cart
               </button>
+              </Link>
               {/* Share, Like, Compare */}
               <div className="mt-2 text-white flex gap-4 text-sm">
                 <button className="hover:text-yellow-500">Share</button>
@@ -84,6 +88,7 @@ export default function Scart() {
               </div>
             </div>
           </div>
+          </Link>   
         ))}
       </div>
 

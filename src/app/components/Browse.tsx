@@ -9,7 +9,7 @@ const Browse = () => {
     <div className="mx-auto mb-[56px] flex flex-col items-center justify-center px-4">
       {/* Header Section */}
       <div className="text-center mb-6">
-        <h1 className="text-3xl font-bold">Browse The Range</h1>
+        <h1 className="text-3xl font-bold mt-6">Browse The Range</h1>
         <p className="text-sm mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
 
